@@ -133,7 +133,7 @@ public class NEWController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        Utilities3.dodajGatunki();
+      
         
         ObservableList<String> list = FXCollections.observableArrayList();
         ObservableList<String> list2 = FXCollections.observableArrayList();
@@ -266,11 +266,17 @@ public class NEWController implements Initializable {
                  
                  }
                 
+                 
+                 Set<Gatunek> SetG =dodanieGatunkowDoFilmu();
+                 if(SetG.isEmpty()==false){
+                 f.setGatunki(SetG);
+                 }
+                 
 	        
                 em.persist(f);             
 
                 
-                dodanieGatunkowDoFilmu(f);
+                
                 
                 System.out.println(f.getGatunki());
                 
@@ -471,23 +477,22 @@ public class NEWController implements Initializable {
             
                 if(Sci.isSelected()){
                 g=Utilities3.dajGatunek("Sci-Fi");
-                film1.addGatunek(g);
+                SetG.add(g);
                 }
                      
                 if(Dokument.isSelected()){
                 g=Utilities3.dajGatunek("Dokumentalny");
-                film1.addGatunek(g);
+                SetG.add(g);
                 }
                 
                 if(Przygodowy.isSelected()){
                 g=Utilities3.dajGatunek("Przygodowy");
-                film1.addGatunek(g);
+                SetG.add(g);
                 }
               return SetG;  
             }
             
-                em.getTransaction().commit();
-                em.close();  
+               
             }
             
-}
+

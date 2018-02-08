@@ -180,7 +180,7 @@ return Lista;
  
  
  
-  public static List<Aktor> WyszukajAktoraPoStringuBezPowtorzenAlpha(String Nazwisko){
+   public static List<Aktor> WyszukajAktoraPoStringuBezPowtorzenAlpha(String Nazwisko){
  
      List<Aktor> Aktorzy;
       List<Aktor> Wynik = new ArrayList<Aktor>() ;

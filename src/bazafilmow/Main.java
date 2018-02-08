@@ -58,8 +58,15 @@ private BorderPane RootLayout;
     
     public static void main(String[] args) {
                 
-                Utilities3.dodajGatunki();
-                Gatunek gg=new Gatunek();
+                Utilities3.dodajGatunki(); 
+                
+                
+                  List<Aktor> Wynik=Utilities.WyszukajAktoraPoStringuBezPowtorzenAlpha("wi");
+                 
+                
+                
+                
+               Gatunek gg=new Gatunek();
                 gg=Utilities3.dajGatunek("Komedia");
                 System.out.println(gg.getNazwa());
                 

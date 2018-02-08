@@ -103,4 +103,47 @@ public class Utilities3 {
     }
     
     
+    
+    public static void dodajTestowychAktorow(){
+     EntityManager em = Utils.getEntityManager();
+     em.getTransaction().begin();
+     
+                Aktor aktor10 = new Aktor();
+                aktor10.setImie("Michal");
+                aktor10.setNazwisko("Wisniewski");
+                
+                  Aktor aktor100 = new Aktor();
+                aktor100.setImie("Jacek");
+                aktor100.setNazwisko("Stonoga");
+                
+                  Aktor aktor1000 = new Aktor();
+                aktor1000.setImie("Dominik");
+                aktor1000.setNazwisko("Redzynia");
+                
+                Aktor aktor1001 = new Aktor();
+                aktor1001.setImie("Juri");
+                aktor1001.setNazwisko("Owsiakiewicz");
+                
+                
+                Aktor aktor1002 = new Aktor();
+                aktor1002.setImie("Gracjan");
+                aktor1002.setNazwisko("Roztocki");
+                
+                em.persist(aktor10);
+                em.persist(aktor100);
+                em.persist(aktor1000);
+                em.persist(aktor1001);
+                em.persist(aktor1002);
+     
+     
+     
+     
+     
+      em.getTransaction().commit();
+      em.close();  
+     
+    }
+    
+    
+    
 }

@@ -117,6 +117,7 @@ public class MainController implements Initializable {
 	                app_stage.show();  
 	            	            
 	    } 
+            /*
             @FXML
             private void GoSzukaj(ActionEvent event) throws IOException{
                 
@@ -127,4 +128,8 @@ public class MainController implements Initializable {
                 stage.setScene(new Scene(root1));  
                 stage.show();
             }
+*/
+            
+            
+            
 }

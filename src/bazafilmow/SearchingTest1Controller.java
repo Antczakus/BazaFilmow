@@ -56,7 +56,7 @@ public class SearchingTest1Controller implements Initializable {
     
      void Wyszukaj(){
          
-        String s=TextA1.getText();
+           String s=TextA1.getText();
          List<Aktor> Wynik ;
          
          
